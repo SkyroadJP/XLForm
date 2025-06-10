@@ -193,21 +193,11 @@
            selector:@selector(contentSizeCategoryChanged:)
                name:UIContentSizeCategoryDidChangeNotification
              object:nil];
-    [nc addObserver:self
-           selector:@selector(keyboardWillShow:)
-               name:UIKeyboardWillShowNotification
-             object:nil];
-    [nc addObserver:self
-           selector:@selector(keyboardWillHide:)
-               name:UIKeyboardWillHideNotification
-             object:nil];
 }
 
 -(void)removeObserverFromController {
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc removeObserver:self name:UIContentSizeCategoryDidChangeNotification object:nil];
-    [nc removeObserver:self name:UIKeyboardWillShowNotification object:nil];
-    [nc removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 #pragma mark - CellClasses
 
